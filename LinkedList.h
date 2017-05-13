@@ -150,7 +150,7 @@ bool LinkedList<TYPE>::deleteAt(int index) {
 
 template <class TYPE>
 void LinkedList<TYPE>::reverseList(LinkedList &list) {
-    
+
 }
 
 #endif //LINKEDLISTTEMPLATE_LINKEDLIST_H
