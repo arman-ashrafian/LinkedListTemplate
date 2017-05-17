@@ -105,11 +105,13 @@ void LinkedList<TYPE>::insertMiddle(TYPE elem) {
     Node *newPtr;
     newPtr = new Node;
 
+    /* fill new node */
     if(newPtr != NULL) {
         newPtr->data = elem;
         newPtr->next = NULL;
     }
 
+    /* check if list is empty */
     if(this->head == NULL) {
         this->head = newPtr;
     } else {
@@ -130,9 +132,9 @@ bool LinkedList<TYPE>::deleteAt(int index) {
     Node *prev;
     ptr = head;
 
-    if(ptr == NULL || index > this->size) {
+    if(ptr == NULL || index > this->size - 1) {
         return false;
-    } else if(index == 1) {
+    } else if(index == 0) {
         head = head->next;
         delete ptr;
     } else {
@@ -144,13 +146,19 @@ bool LinkedList<TYPE>::deleteAt(int index) {
         prev->next = ptr->next;
         delete ptr;
     }
-
+    size -= 1;
     return true;
 }
 
 template <class TYPE>
 void LinkedList<TYPE>::reverseList(LinkedList &list) {
+    Node *ptr;
+    ptr = head;
 
+    for(int i = 0; i < this->size; i++) {
+        list.push(ptr->data);
+        ptr = ptr->next;
+    }
 }
 
 #endif //LINKEDLISTTEMPLATE_LINKEDLIST_H

@@ -1,21 +1,33 @@
 #include <iostream>
 #include "LinkedList.h"
+#include "Stack.h"
 
+/*
+ * This program uses a stack template which is a wrapper
+ * for the Linked List
+ */
 int main() {
-    LinkedList<int> list;
 
-    list.push(10);
-    list.push(20);
-    list.push(30);
-    list.push(40);
+    Stack<int> myStack;
 
-    list.print();
+    myStack.push(10);
+    myStack.push(20);
+    myStack.push(30);
+    myStack.push(40);
 
-    std::cout << std::endl;
+    int mySize = myStack.size();
+    std::cout << "size: " << mySize << std::endl;
 
-    list.deleteAt(2);
+    try {
+        for(int i = 0; i < mySize; i++) {
+            std::cout << myStack.pop() << std::endl;
+        }
 
-    list.print();
+        myStack.pop(); // Popping an empty stack
+    } catch(...) {
+        std::cout << "Cannot pop an empty stack" << std::endl;
+    }
+
 
     return 0;
 }
