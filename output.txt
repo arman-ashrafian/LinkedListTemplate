@@ -1,0 +1,34 @@
+// Arman Ashrafian
+// CS 1C
+// 5-17-2017
+
+List 1: 88 78 62 123 60 
+List 2: 60 123 62 78 88 
+
+Deleting 3rd node
+List 1: 88 78 123 60 
+List 2: 60 123 78 88 
+
+Inserting in the middle
+List 1: 88 78 70 123 60 
+List 2: 60 123 70 78 88 
+
+Repeat using doubles...
+
+List 1: 88.0 78.0 62.0 123.0 60.0 
+List 2: 60.0 123.0 62.0 78.0 88.0 
+
+Deleting 3rd node
+List 1: 88.0 78.0 123.0 60.0 
+List 2: 60.0 123.0 78.0 88.0 
+
+Inserting in the middle
+List 1: 88.0 78.0 70.0 123.0 60.0 
+List 2: 60.0 123.0 70.0 78.0 88.0 
+
+Error Checking
+
+list1.deleteAt(100): cannot delete, node does not exist
+Clearing list 1
+Deleting from an empty list:
+list1.deleteAt(2): cannot delete, list is empty

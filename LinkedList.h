@@ -1,3 +1,7 @@
+/* Arman Ashrafian
+ * CS 1C
+ * 5-17-2017
+ */
 
 #ifndef LINKEDLISTTEMPLATE_LINKEDLIST_H
 #define LINKEDLISTTEMPLATE_LINKEDLIST_H
@@ -63,9 +67,10 @@ void LinkedList<TYPE>::print() const {
     ptr = this->head;
 
     while(ptr != NULL) {
-        std::cout << ptr->data << std::endl;
+        std::cout << ptr->data << " ";
         ptr = ptr->next;
     }
+    std::cout << std::endl;
 }
 
 template <class TYPE>
@@ -132,8 +137,10 @@ bool LinkedList<TYPE>::deleteAt(int index) {
     Node *prev;
     ptr = head;
 
-    if(ptr == NULL || index > this->size - 1) {
-        return false;
+    if(ptr == NULL) {
+    	throw "Cannot delete from empty list";
+    } else if(index > this->size - 1) {
+    	throw "Cannot delete nonexistent node";
     } else if(index == 0) {
         head = head->next;
         delete ptr;

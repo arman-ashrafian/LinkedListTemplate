@@ -8,6 +8,10 @@
 
 #include "LinkedList.h"
 
+
+/* Stack Template
+ * - wraps LinkedList to create a Stack interface
+ */
 template <class TYPE>
 class Stack {
 public:
@@ -49,8 +53,5 @@ template <class TYPE>
 Stack<TYPE>::~Stack() {
     stack.clearList();
 }
-
-
-
 
 #endif //LINKEDLISTTEMPLATE_STACK_H

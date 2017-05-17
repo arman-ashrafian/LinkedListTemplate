@@ -1,0 +1,11 @@
+// Arman Ashrafian
+// CS1C
+// 5-17-2017
+
+size: 4
+Popping all elements:
+40
+30
+20
+10
+Cannot pop an empty stack
